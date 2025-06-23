@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
   # Caracteristicas del Nodo maestro
   config.vm.define "k3s-master-1" do |master|
     master.vm.hostname = "k3s-master" # Nombre del nodo maestro
-    master.vm.network "private_network", ip: "192.168.56.10" # IP del nodo maestro
+    master.vm.network "private_network", ip: "10.98.56.128" # IP del nodo maestro
     master.vm.provider "virtualbox" do |vb|
       vb.memory = "2048" # Memoria RAM del nodo maestro
       vb.cpus = 2 # Numero de CPUs del nodo maestro
@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 # Caracteristicas del Nodo trabajador 1
   config.vm.define "k3s-master-2" do |worker|
     worker.vm.hostname = "k3s-master-2" # Nombre del nodo trabajador 1
-    worker.vm.network "private_network", ip: "192.168.56.11" # IP del nodo trabajador 1
+    worker.vm.network "private_network", ip: "10.98.56.129" # IP del nodo trabajador 1
     worker.vm.provider "virtualbox" do |vb|
       vb.memory = "2048" # Memoria RAM del nodo trabajador 1
       vb.cpus = 2 # Numero de CPUs del nodo trabajador 1
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
 # Caracteristicas del Nodo trabajador 2
 config.vm.define "k3s-master-3" do |worker_2|
   worker_2.vm.hostname = "k3s-master-3" # Nombre del nodo trabajador 2
-  worker_2.vm.network "private_network", ip: "192.168.56.12" # IP del nodo trabajador 2
+  worker_2.vm.network "private_network", ip: "10.98.56.130" # IP del nodo trabajador 2
   worker_2.vm.provider "virtualbox" do |vb|
     vb.memory = "2048" # Memoria RAM del nodo trabajador 2
     vb.cpus = 2 # Numero de CPUs del nodo trabajador 2
