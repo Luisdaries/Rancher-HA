@@ -1,0 +1,5 @@
+.vagrant
+certs
+.password
+.pass*
+
