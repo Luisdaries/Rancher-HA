@@ -1,3 +1,5 @@
 .vagrant
 certs
 .password
+.pass
+

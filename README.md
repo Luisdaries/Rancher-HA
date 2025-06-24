@@ -197,7 +197,7 @@ Nodo principal
    54  sudo kubectl get svc --all-namespaces -o wide
 
 Nodos externos:
-curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server     --server https://10.98.56.128:6443     --tls-san=10.98.56.129
+curl -sfL https://get.k3s.io | K3S_TOKEN=K10773d67a905138e0cee6a3f8844a642c5ff3b5477e06e5cb0e0c17377ffe52ece::server:0c3bc785363bd8685f1626983a796404 sh -s - server     --server https://10.98.56.128:6443     --tls-san=10.98.56.129
 DNS local
 10.98.56.128 rancher.my.org
 
