@@ -12,7 +12,19 @@
 
 ## Consideraciones
 
-* Tener un certificado SSL verificado y vigente con el nombre de dominio con el que levantaremos el aplicativo
+* Tener un certificado SSL verificado y vigente con el nombre de dominio con el que levantaremos el aplicativo.
+
+
+## Estructura
+
+  - Certs
+    - certificate.crt
+    - private.key
+    - fullchain.pem
+    - ca_bundle.crt
+  - Docker/docker-compose.yml
+  - Nginx/nginx.conf
+  - Vagrant/Vagrantfile
 ---
 
 # Levantar los nodos con vagrant
@@ -118,7 +130,7 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server \
   --tls-san=adan-gomez.online
 ```
 
-Nota: Reemplaza `--tls-san` con la IP correspondiente de cada nodo si deseas exponerlo.
+Nota: Reemplaza `--tls-san` con la IP correspondiente de cada nodo.
 
 ---
 
@@ -200,7 +212,8 @@ kubectl get svc --all-namespaces -o wide
 Agregar en `/etc/hosts` de cada nodo o configurar en tu DNS:
 
 ```
-10.98.56.128 k3s.mydomain.com
+La IP asignada por tu modem
+10.0.0.0 adan-gomez.online
 ```
 
 ## 8. Balanceador de Carga
